@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zeus Homepage</title>
+</head>
+<body>
+    <h1>Check Your APK</h1>
+    <form action="result/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        Select a File: <input type="file" name="file_input">
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>

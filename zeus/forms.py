@@ -1,4 +1,4 @@
 from django import forms
 
 class uploadForm(forms.Form):
-    file_input = forms.FileInput()
+    file_input = forms.FileField()

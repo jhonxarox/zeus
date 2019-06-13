@@ -1,11 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Result</title>
-</head>
-<body>
-    <h1>Result Page</h1>
-    <h2>{{ file_name }}</h2>
-</body>
-</html>
+{% extends 'base.html'%}
+
+{% block content %}
+    <div class="text-center mb-4">
+        <h1 class="mb-3 font-weight-normal">Result</h1>
+    </div>
+{#    <h2 class="mb-3 font-weight-normal">App Name : </h2>#}
+{#    <p>{{ app_name }}</p>#}
+{#    <h2 class="mb-3 font-weight-normal">Status :</h2>#}
+{#    <p>{{ status }}</p>#}
+{#    <form action="/">#}
+{#        <button type="submit" class="btn-dark">Back To Home</button>#}
+{#    </form>#}
+
+    <dl class="row">
+        <dt class="col-sm-3">App Name</dt>
+        <dd class="col-sm-9">{{ app_name }}</dd>
+
+        <dt class="col-sm-3">Status</dt>
+        <dd class="col-sm-9">{{ status }}</dd>
+
+{#        <dt class="col-sm-3">Permission</dt>#}
+{#        {% for %}#}
+{#        <dd class="col-sm-9">{{ permission }}</dd>#}
+    </dl>
+
+    <form action="/">
+        <button type="submit" class="btn-dark">Back To Home</button>
+    </form>
+
+{% endblock %}

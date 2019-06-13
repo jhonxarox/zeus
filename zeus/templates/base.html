@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href={% static 'favicon.ico' %}>
+
+    <title>Android Classfication </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href={%static  "/css/bootstrap.min.css" %} rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href={% static '/css/cover.css' %} rel="stylesheet">
+</head>
+
+<body>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <h3 class="masthead-brand">TA-03</h3>
+{#            <nav class="nav nav-masthead justify-content-center">#}
+{#                <a class="nav-link active" href="#">Home</a>#}
+{#                <a class="nav-link" href="#">Features</a>#}
+{#                <a class="nav-link" href="#">Contact</a>#}
+{#            </nav>#}
+        </div>
+    </header>
+
+    <main role="main" class="inner cover">
+       {% block content %}{% endblock %}
+    </main>
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+            <p class="mt-5 mb-3 text-center text-white">&copy; 2018-2019</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

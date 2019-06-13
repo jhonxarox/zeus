@@ -1,15 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Zeus Homepage</title>
-</head>
-<body>
-    <h1>Check Your APK</h1>
-    <form action="result/" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        Select a File: <input type="file" name="file_input">
-        <input type="submit" value="Upload">
-    </form>
-</body>
-</html>
+{% extends 'base.html'%}
+
+{% block content %}
+ <form class="form-signin" action="result/" method="post" enctype="multipart/form-data">
+ {% csrf_token %}
+
+     <div class="text-center mb-4">
+         <h1 class="h3 mb-3 font-weight-normal">Android App Classification</h1>
+         <p>Please upload your Android Package (APK) Here.</p>
+     </div>
+
+     <div class="form-group">
+         <input type="file" name="file_input" class="form-control-file mb-1"  required autofocus>
+     </div>
+
+     <button class="btn btn-lg btn-primary btn-block btn-light" type="submit">Upload</button>
+ </form>
+
+
+{% endblock %}
